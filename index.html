@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lý lịch số - Nguyễn Văn A</title>
+    <title>Digital Portfolio - Nguyễn Anh Đức</title>
     <style>
         * {
             box-sizing: border-box;
@@ -19,7 +19,7 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            padding: 20px;
+            padding: 40px 20px;
         }
 
         .profile-card {
@@ -57,14 +57,15 @@
             align-items: center;
         }
 
-        .avatar-container svg {
-            width: 80px;
-            height: 80px;
-            fill: #4364f7;
+        /* Hiển thị ảnh đại diện 123.jpg chỉn chu */
+        .avatar-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .profile-header h1 {
-            font-size: 24px;
+            font-size: 26px;
             margin-bottom: 5px;
             font-weight: 600;
             letter-spacing: 0.5px;
@@ -125,6 +126,61 @@
             margin-top: 5px !important;
         }
 
+        /* Cấu trúc phần danh sách bài tập (Portfolio Items) */
+        .portfolio-section {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 2px solid #edf2f7;
+        }
+
+        .portfolio-title {
+            font-size: 16px;
+            color: #2d3748;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .portfolio-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .portfolio-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-left: 4px solid #4364f7;
+            padding: 12px 15px;
+            border-radius: 6px;
+            text-decoration: none;
+            color: #4a5568;
+            font-size: 14px;
+            transition: all 0.2s ease;
+        }
+
+        .portfolio-item:hover {
+            background: #edf2f7;
+            border-left-color: #0052d4;
+            color: #0052d4;
+            transform: translateX(4px);
+        }
+
+        .portfolio-item .btn-view {
+            background: #0052d4;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .portfolio-item:hover .btn-view {
+            background: #4364f7;
+        }
+
         .profile-footer {
             background: #f8fafc;
             padding: 15px;
@@ -140,11 +196,9 @@
     <div class="profile-card">
         <div class="profile-header">
             <div class="avatar-container">
-                <svg viewBox="0 0 24 24">
-                    <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
-                </svg>
+                <img src="123.jpg" alt="Ảnh đại diện cá nhân">
             </div>
-            <h1>Lý Lịch Số Cá Nhân</h1>
+            <h1>Nguyễn Anh Đức</h1>
             <p>Sinh viên Đại học Công nghệ - ĐHQGHN (UET)</p>
         </div>
 
@@ -160,10 +214,48 @@
                     Tận dụng niềm đam mê khám phá công nghệ và tư duy phân tích nhạy bén để làm chủ các kiến thức chuyên ngành Điện tử viễn thông tại UET. Mục tiêu ngắn hạn là ứng dụng xuất sắc các công cụ AI hỗ trợ tối ưu hóa hiệu suất học tập phần mềm và phần cứng. Hướng tới mục tiêu dài hạn là trở thành một kỹ sư chuyên nghiệp, tham gia nghiên cứu và phát triển các hệ thống thông minh, vi mạch hoặc các giải pháp kết nối mạng thế hệ mới.
                 </p>
             </div>
+
+            <div class="portfolio-section">
+                <div class="portfolio-title">[Danh sách Sản phẩm & Bài tập số]</div>
+                <div class="portfolio-grid">
+                    
+                    <a href="BTAP.pdf" target="_blank" class="portfolio-item">
+                        <span>📄 Bài tập tổng hợp (BTAP.pdf)</span>
+                        <span class="btn-view">Xem PDF</span>
+                    </a>
+
+                    <a href="tuan2AI.pdf" target="_blank" class="portfolio-item">
+                        <span>📄 Tuần 2: Nghiên cứu ứng dụng AI (tuan2AI.pdf)</span>
+                        <span class="btn-view">Xem PDF</span>
+                    </a>
+
+                    <a href="tuan3Prompt.pdf" target="_blank" class="portfolio-item">
+                        <span>📄 Tuần 3: Kỹ nghệ Prompt nâng cao (tuan3Prompt.pdf)</span>
+                        <span class="btn-view">Xem PDF</span>
+                    </a>
+
+                    <a href="tuan4Collaboration.pdf" target="_blank" class="portfolio-item">
+                        <span>📄 Tuần 4: Kỹ năng Cộng tác phối hợp (tuan4Collaboration.pdf)</span>
+                        <span class="btn-view">Xem PDF</span>
+                    </a>
+
+                    <a href="tuan5CreativeAI.pdf" target="_blank" class="portfolio-item">
+                        <span>📄 Tuần 5: Sáng tạo nội dung với AI (tuan5CreativeAI.pdf)</span>
+                        <span class="btn-view">Xem PDF</span>
+                    </a>
+
+                    <a href="tuan6EthicsAI.pdf" target="_blank" class="portfolio-item">
+                        <span>📄 Tuần 6: Đạo đức & Trách nhiệm AI (tuan6EthicsAI.pdf)</span>
+                        <span class="btn-view">Xem PDF</span>
+                    </a>
+
+                </div>
+            </div>
+
         </div>
 
         <div class="profile-footer">
-            © 2026 Lý lịch số điện tử. Hồ sơ được cập nhật tự động.
+            © 2026 Lý lịch số điện tử & Portfolio cá nhân.
         </div>
     </div>
 
